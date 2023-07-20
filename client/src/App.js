@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Menu from "./components/Menu/Menu";
 import Home from "./pages/home/Home";
 import "./styles/global.scss";
+import Users from "./pages/users/Users";
 
 function App() {
   const Layout = () => {
@@ -36,7 +37,7 @@ function App() {
         },
         {
           path: "/users",
-          element: <h1>users</h1>,
+          element: <Users />,
         },
         {
           path: "/products",
