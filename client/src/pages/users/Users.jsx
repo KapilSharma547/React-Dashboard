@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Users.scss";
 import DataTable from "../../components/dataTable.tsx/DataTable";
 import { userRows } from "../../data";
+import Add from "../../components/add/Add";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -60,6 +61,7 @@ const Users = () => {
         <button onClick={() => setOpen(true)}>Add New User</button>
       </div>
       <DataTable slug="users" columns={columns} rows={userRows} />
+      {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
     </div>
   );
 };
