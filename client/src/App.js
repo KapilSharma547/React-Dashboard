@@ -5,6 +5,11 @@ import Menu from "./components/Menu/Menu";
 import Home from "./pages/home/Home";
 import "./styles/global.scss";
 import Users from "./pages/users/Users";
+import Products from "./pages/products/Products";
+import User from "./pages/user/User.jsx";
+import Product from "./pages/product/Product";
+import Login from "./pages/login/Login";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const Layout = () => {
@@ -21,7 +26,7 @@ function App() {
             {/* </QueryClientProvider> */}
           </div>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   };
@@ -41,21 +46,23 @@ function App() {
         },
         {
           path: "/products",
-          element: <h1>products</h1>,
+          element: <Products />,
         },
         {
           path: "/users/:id",
+          element: <User />,
         },
         {
           path: "/products/:id",
-          element: <h1>/products/:id</h1>,
+          element: <Product />,
         },
       ],
     },
     {
       path: "/login",
-      element: <h1>/login</h1>,
+      element: <Login />,
     },
+    ,
   ]);
 
   return <RouterProvider router={router} />;
